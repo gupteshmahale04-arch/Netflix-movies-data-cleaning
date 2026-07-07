@@ -43,10 +43,10 @@ The pipeline implements an end-to-end cleaning workflow tackling the following i
 ## 🚀 Key Learning Takeaways
 
 By exploring this repository, you will master how to:
-* Handle missing entries strategically without creating data bias (e.g., knowing when to drop rows vs. when to impute with the median value).
-* Write custom text-processing logic to apply across entire dataframes using `.apply()`.
+* Handle missing entries strategically without creating data bias (e.g., knowing when to drop rows vs. when to impute with the median value ).
+* Write custom text-processing logic to apply across entire dataframes using `.apply()` .
 * Enforce **Domain-Rule Validations** to trap anomalies that automated validation checks miss.
-* Utilize Pandas' nullable integer types (`"Int64"`) to allow integer columns to retain structural `NaN` values without altering data shapes.
+* Utilize Pandas' nullable integer types (`"Int64"`) to allow integer columns to retain structural `NaN` values without altering data shapes .
 
 ---
 
