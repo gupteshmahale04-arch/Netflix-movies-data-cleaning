@@ -31,7 +31,7 @@ The pipeline implements an end-to-end cleaning workflow tackling the following i
 | **09** | `Rating` | Numerical data stored strictly as text objects | Coerced types safely using `pd.to_numeric(errors="coerce")` |
 | **10** | `IMDb_Rating` | Extreme logical outliers outside the standard `[0, 10]` scale | Nullified invalid out-of-bounds ratings to protect statistical means |
 | **11** | `Votes` | String-formatted numbers containing thousands commas (e.g., `"1,558,685"`) | Stripped formatting characters and cast to integer types |
-| **12-13**| `Budget` & `Revenue` | Financial currency symbols (`$`), commas, and invalid `<= 0` records | Formatted string to float; coerced unrealistic zero-revenues to `NaN` |
+| **12-13**| `Budget` & `Revenue` | Financial currency symbols (`$`), commas, and invalid `<= 0` records | Formatted string to float; coerced unrealistic zero-revenues to    `NaN` |
 | **14** | `Date_Added` | Dates saved simultaneously across 4 distinct formats | Created a 10-digit compact regex patch and unified with `pd.to_datetime()` |
 | **15-16**| `Country` & `Language` | Synonyms, casing variants, and abbreviations (e.g., `USA`, `U.S.`, `Hin`, `Eng`) | Handled mapping variants accurately using programmatic dictionary lookup tables |
 | **18** | Near-Duplicates | Rows sharing identical `Title` and `Release_Year` values | Eliminated redundant observations while safely preserving original remakes/sequels |
@@ -43,10 +43,10 @@ The pipeline implements an end-to-end cleaning workflow tackling the following i
 ## 🚀 Key Learning Takeaways
 
 By exploring this repository, you will master how to:
-* Handle missing entries strategically without creating data bias (e.g., knowing when to drop rows vs. when to impute with the median value ).
+* Handle missing entries strategically without creating data bias (e.g., knowing when to drop   rows vs. when to impute with the median value ).
 * Write custom text-processing logic to apply across entire dataframes using `.apply()` .
 * Enforce **Domain-Rule Validations** to trap anomalies that automated validation checks miss.
-* Utilize Pandas' nullable integer types (`"Int64"`) to allow integer columns to retain structural `NaN` values without altering data shapes .
+* Utilize Pandas' nullable integer types (`"Int64"`) to allow integer columns to retain structural `NaN` values without   altering data shapes .
 
 ---
 
