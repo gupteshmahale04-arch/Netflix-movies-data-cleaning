@@ -4,7 +4,7 @@ A comprehensive, step-by-step Jupyter Notebook solution demonstrating real-world
 
 ---
 
-## 📌 Project Overview
+## 📌  Project Overview
 
 Data analysts spend up to 80% of their time cleaning data. This project serves as a practical blueprint for identifying and systematically resolving common data quality issues found in production-level datasets. 
 
